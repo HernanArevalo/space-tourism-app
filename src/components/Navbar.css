@@ -1,0 +1,87 @@
+
+.navbar{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    height: 96px;
+    width: 100vw;
+    top: 40px;
+    font-family: Barlow Condensed; /* Bellefair */
+    font-size: 16px;
+    letter-spacing: 2.7px;
+}
+
+.navbar-logo{
+    margin-left: 40px;
+    height: 48px;
+}
+
+.navbar-line{
+    height: 1px;
+    width: 35%;
+    background-color: #979797;
+    margin-left: 60px;
+    z-index: 999;
+}
+
+.navbar-list{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    width: 57%;
+    height: 100%;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0px;
+}
+
+.navbar-item{
+    position: relative;
+}
+
+.navbar-list li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navbar-item-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 96px;
+
+    
+}
+
+.navbar-item-number{
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.navbar-active-rectangle{
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    z-index: 10;
+}
+
+.navbar-hover-rectangle{
+    background-color: transparent;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    transition: .4s;
+}
+
+ .navbar-item:hover > .navbar-hover-rectangle{
+    background-color: #979797;
+
+}
