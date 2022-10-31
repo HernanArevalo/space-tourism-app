@@ -1,5 +1,5 @@
 
-export * from './HomePage'
-export * from './CrewPage'
-export * from './DestinationPage'
-export * from './TechnologyPage'
+export * from './HomePage/HomePage'
+export * from './CrewPage/CrewPage'
+export * from './DestinationPage/DestinationPage'
+export * from './TechnologyPage/TechnologyPage'

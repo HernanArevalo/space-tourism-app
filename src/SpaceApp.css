@@ -1,7 +1,15 @@
 .space-app{
-    background: url('../assets/home/background-home-desktop.jpg');
+    background: url('./assets/home/background-home-desktop.jpg');
     width: 100vw;
     height: 100vh;
     background-size: cover;
+    color: rgb(255, 255, 255);
 }
 
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  

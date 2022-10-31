@@ -1,0 +1,79 @@
+
+.home-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    align-items: end;
+    box-sizing: border-box;
+    padding: 6% 0;
+    position: relative;
+}
+
+.home-container > div{
+    width: 382px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.left-content h2{
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4.75px;
+    color: #D0D6F9;
+
+}
+
+.left-content h1{
+    font-family: Bellefair;
+    font-size: 150px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.left-content p{
+    font-family: Barlow Condensed;
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+    text-align: justify;
+}
+
+.explore-container{
+    width: 274px;
+    height: 274px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    font-family: Bellefair;
+    font-size: 32px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.explore-container > div{
+    background-color: white;
+    width: 274px;
+    height: 274px;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.explore-container:hover{
+    width: 420px;
+    height: 420px;
+    background-color: rgba(255, 255, 255, .2);
+}
