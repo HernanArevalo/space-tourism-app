@@ -1,0 +1,72 @@
+
+.destination-container{
+    background: url('../../assets/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 200px;
+}
+
+.destination-container > div{
+    width: 382px;
+
+}
+.left-text{
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    letter-spacing: 4.72px;
+    margin-bottom: 80px;
+}
+
+.left-text span{
+    color: #979797;
+    font-weight: 700;
+    margin-right: 10px;
+
+
+}
+
+.planet-image{
+
+}
+
+.destination-list{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 285px;
+    justify-content: space-evenly;
+    height: 34px;
+
+}
+
+.destination-item{
+    position: relative;
+}
+
+.destination-item a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+
+.destination-hover-rectangle{
+    background-color: transparent;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    transition: .4s;
+}
+
+.destination-item:hover > .destination-hover-rectangle{
+    background-color: #979797;
+
+}
+

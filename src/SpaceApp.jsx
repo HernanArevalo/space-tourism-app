@@ -11,7 +11,7 @@ function SpaceApp() {
 
       <Routes>
         <Route path="/home" element={ <HomePage />}/>
-        <Route path="/destination" element={ <DestinationPage />}/>
+        <Route path="/destination/:destination" element={ <DestinationPage />}/>
         <Route path="/crew" element={ <CrewPage />}/>
         <Route path="/technology" element={ <TechnologyPage />}/>
 
