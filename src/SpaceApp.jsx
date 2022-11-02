@@ -1,6 +1,6 @@
-import { Route, Routes } from 'react-router-dom'
+
 import { Navbar } from './components/Navbar'
-import { CrewPage, DestinationPage, HomePage, TechnologyPage } from './pages'
+import { SpaceRouter } from './router/SpaceRouter'
 import './SpaceApp.css'
 
 function SpaceApp() {
@@ -9,14 +9,7 @@ function SpaceApp() {
     <div className="space-app">
       <Navbar />
 
-      <Routes>
-        <Route path="/home" element={ <HomePage />}/>
-        <Route path="/destination/:destination" element={ <DestinationPage />}/>
-        <Route path="/crew" element={ <CrewPage />}/>
-        <Route path="/technology" element={ <TechnologyPage />}/>
-
-        <Route path="/*" element={ <HomePage />}/>
-      </Routes>
+      <SpaceRouter />
 
     </div>
   )

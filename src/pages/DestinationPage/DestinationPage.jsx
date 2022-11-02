@@ -1,57 +1,59 @@
 
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { destinations } from '../../data.json'
 import './DestinationPage.css'
 
 
 export const DestinationPage = () => {
+
+  const { destination:destinationParam } = useParams()
+
+  const destination = destinations.filter(dest => destinationParam.includes(dest.name.toLowerCase()))[0]
+
   return (
-    <div className="destination-container">
+    <div className="destination-container animate__animated animate__fadeIn animate__slow">
 
       <div className='left-content'>
         <div className="left-text">
             <span className="">01</span>
             PICK YOUR DESTINATION
         </div>
-        <img src="src/assets/destination/image-moon.png" className='planet-image' />
+        <img src={ `${ destination.images.png }` } className='planet-image' />
       </div>
 
       <div className='right-content'>
-      <ul className='destination-list'>
-                <li className='destination-item'>
-                    <Link to="/destination/moon">
-                      <div className="destination-item-text">
-                          MOON
-                      </div>
-                    </Link>
-                    <div className='destination-hover-rectangle'></div>
-                </li>
-                <li className='destination-item'>
-                    <Link to="/destination/mars">
-                      <div className="destination-item-text">
-                          MARS
-                      </div>
-                    </Link>
-                    <div className='destination-hover-rectangle'></div>
-                </li>
-                <li className='destination-item'>
-                    <Link to="/destination/europa">
-                      <div className="destination-item-text">
-                          EUROPA
-                      </div>
-                    </Link>
-                    <div className='destination-hover-rectangle'></div>
-                </li>
-                <li className='destination-item'>
-                    <Link to="/destination/titan">
-                    <div className="destination-item-text">
-                        TITAN
-                    </div>
+        <ul className='destination-list'>
 
-                    </Link>
-                    <div className='destination-hover-rectangle'></div>
-                </li>
-            </ul>
+          { destinations.map(destination =>           
+                (
+                  <li className='destination-item' key={ destination.name }>
+                      <Link to={`/destination/${destination.name.toLowerCase()}`}>
+                        <div className={`destination-item-text ${destinationParam.includes(destination.name.toLowerCase())? 'active':''}`}>
+                            { destination.name.toUpperCase() }
+                        </div>
+                      </Link>
+                      <div className={`destination-rectangle ${destinationParam.includes(destination.name.toLowerCase())? 'active':'inactive'}`}></div>
+                  </li>
+                ))
+          }
+        </ul>
 
+        <div className="destination-name">
+          { destination.name.toUpperCase() }
+        </div>
+        <p className="destination-description">
+          { destination.description }
+        </p>
+        <div className="destination-data">
+          <div className='destination-data-distance'>
+            <div className='destination-data-title'>AVG. DISTANCE</div>
+            <div className='destination-data-number'>{ destination.distance.toUpperCase() }</div>
+          </div>
+          <div>
+            <div className='destination-data-title'>EST. TRAVEL TIME</div>
+            <div className='destination-data-number'>{ destination.travel.toUpperCase() }</div>
+          </div>
+        </div>
       </div>
     </div>
   )

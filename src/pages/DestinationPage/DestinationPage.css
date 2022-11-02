@@ -13,7 +13,7 @@
 }
 
 .destination-container > div{
-    width: 382px;
+    width: 450px;
 
 }
 .left-text{
@@ -31,32 +31,46 @@
 
 }
 
-.planet-image{
-
+.right-content{
+    padding-top: 70px;
 }
+
 
 .destination-list{
     margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     flex-direction: row;
     width: 285px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 34px;
 
 }
 
 .destination-item{
     position: relative;
+    cursor: pointer;
 }
 
 .destination-item a{
     color: rgb(255, 255, 255);
     text-decoration: none;
-
+    height: 100%;
+    width: 100%;
 }
 
-.destination-hover-rectangle{
+.destination-item-text{
+    height: 100%;
+    width: 100%;
+    color: #979797;
+    transition: .5s;
+}
+
+.destination-item-text.active{
+    color: rgb(255, 255, 255);
+}
+.destination-rectangle{
     background-color: transparent;
     height: 3px;
     width: 100%;
@@ -65,8 +79,61 @@
     transition: .4s;
 }
 
-.destination-item:hover > .destination-hover-rectangle{
+.destination-rectangle.active{
+    background-color: rgb(255, 255, 255);
+
+}
+
+.destination-item:hover > .destination-rectangle.inactive{
     background-color: #979797;
 
 }
 
+.destination-name{
+    font-family: Bellefair;
+    font-size: 100px;
+    margin-top: 30px;
+
+}
+
+.destination-description{
+    font-family: Barlow Condensed;
+    font-size: 18px;
+    font-weight: 300;
+    color: #D0D6F9;
+    margin: 0;
+    height: 150px;
+    box-sizing: border-box;
+    width: 444px;
+    line-height: 32px;
+    border-bottom: 1px solid #383B4B;
+}
+
+.destination-data{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+.destination-data-title{
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    color: #D0D6F9;
+    letter-spacing: 2.36px;
+    margin-bottom: 10px;
+}
+
+.destination-data-number{
+    font-family: Bellefair;
+    font-size: 28px;
+}
+
+.destination-data-distance{
+    margin-right: 0px;
+}
+
+.destination-data > div{
+    width: 200px;
+}
