@@ -22,7 +22,7 @@
     height: 400px;
 }
 
-.left-content h2{
+.home-left-content h2{
     font-family: Barlow Condensed;
     font-size: 28px;
     font-weight: 400;
@@ -31,14 +31,14 @@
 
 }
 
-.left-content h1{
+.home-left-content h1{
     font-family: Bellefair;
     font-size: 150px;
     font-weight: 500;
     margin: 0;
 }
 
-.left-content p{
+.home-left-content p{
     font-family: Barlow Condensed;
     font-size: 18px;
     line-height: 32px;

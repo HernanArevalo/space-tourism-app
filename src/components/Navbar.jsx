@@ -38,7 +38,7 @@ export const Navbar = () => {
                     <div className='navbar-hover-rectangle'></div>
                 </li>
                 <li className='navbar-item'>
-                    <Link to="crew">
+                    <Link to="crew/hurley">
                         <div className="navbar-item-text">
                             <span className='navbar-item-number'>02</span>
                             CREW

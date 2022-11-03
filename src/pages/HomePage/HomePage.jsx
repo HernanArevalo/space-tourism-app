@@ -5,7 +5,7 @@ export const HomePage = () => {
   return (
     <div className="home-container animate__animated animate__fadeIn animate__slow">
 
-      <div className="left-content">
+      <div className="home-left-content">
         <h2>SO, YOU WANT TO TRAVEL TO</h2>
         <h1>SPACE</h1>
         <p>  Let's face it; if you want to go to space, you might as well genuinely go to 

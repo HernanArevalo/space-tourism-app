@@ -6,7 +6,7 @@ export const SpaceRouter = () => {
     <Routes>
         <Route path="/home" element={ <HomePage />}/>
         <Route path="/destination/:destination" element={ <DestinationPage />}/>
-        <Route path="/crew" element={ <CrewPage />}/>
+        <Route path="/crew/:member" element={ <CrewPage />}/>
         <Route path="/technology" element={ <TechnologyPage />}/>
 
         <Route path="/*" element={ <Navigate to='/home' /> }/>
