@@ -48,7 +48,7 @@ export const Navbar = () => {
                     <div className='navbar-hover-rectangle'></div>
                 </li>
                 <li className='navbar-item'>
-                    <Link to="technology">
+                    <Link to="technology/spaceport">
                     <div className="navbar-item-text">
                         <span className='navbar-item-number'>03</span>
                         TECHNOLOGY

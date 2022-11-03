@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { crew } from '../../data.json'
 import './CrewPage.css'
 
@@ -31,14 +31,17 @@ export const CrewPage = () => {
             </p>
             <div className="members-circles">
               { crew.map(memb => (
-                  <div className={`member-circle${memb.name.toLowerCase().includes(memberParam)? ' active':''}`}></div>
+                  <Link to={`/crew/${memb.lastname.toLowerCase()}`}> 
+                    <div className={`member-circle${memb.name.toLowerCase().includes(memberParam)? ' active':''}`}></div>
+                  </Link> 
               ))}
 
             </div>
           </div>
 
           <div className='crew-right-content'>
-            <div className="memember-picture">
+            <div className="member-picture">
+              <img src={ `${ member.images.png }` } className='planet-image' />
             </div>
           </div>
 

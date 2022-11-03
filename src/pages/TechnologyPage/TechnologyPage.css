@@ -1,0 +1,104 @@
+.tech-container{
+    background: url('../../assets/technology/background-technology-desktop.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+
+.tech-content{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.tech-left-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.tech-circles{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.tech-circle{
+    height: 80px;
+    width: 80px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 999px;
+    border: 1px solid white;
+    font-family: Bellefair;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    padding-left: 4px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+.tech-circle:hover{
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid rgba(255, 255, 255, .2);
+    
+}
+.tech-circles a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.tech-circle.active{
+    background-color: rgb(255, 255, 255);
+    color: #0B0D17;
+
+}
+
+
+
+.tech-text{
+    width: 59%;
+}
+
+.tech-text h3{
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: #D0D6F9;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+}
+
+.tech-text h2{
+    font-family: Bellefair;
+    font-size: 56px;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 17px;
+}
+
+.tech-text p{
+    font-family: Barlow;
+    font-size: 18px;
+    color: #D0D6F9;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+.tech-picture img{
+    height: 500px;
+}

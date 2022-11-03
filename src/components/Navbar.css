@@ -87,3 +87,30 @@
 
 }
 
+@media (max-width: 870px) {
+    .navbar{
+        top: 0;
+        height: 80px;
+    }
+
+    .navbar-line{
+        display: none;
+    }
+    .navbar-logo img{
+        height: 40px;
+        width: 40px;
+    }
+    .navbar-item-text{
+        height: 80px;
+            
+    }
+    .navbar-item-text span{
+        display: none;
+    }
+    .navbar-list{
+        background-color: rgba(151, 151, 151, 0.2);
+        backdrop-filter: none;
+    }
+
+    
+}

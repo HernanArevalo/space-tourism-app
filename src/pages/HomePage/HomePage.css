@@ -79,3 +79,46 @@
     height: 420px;
     background-color: rgba(255, 255, 255, .2);
 }
+
+
+@media (max-width: 870px) {
+    .home-container{
+        background: url('../../assets/home/background-home-tablet.jpg');
+        font-family: Barlow;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        box-sizing: border-box;
+        padding-top: 80px;
+        position: relative;
+        padding-top: 167px;
+    }
+
+    .explore-container > div, .explore-container{
+        width: 200px;
+        height: 200px;
+    
+    }
+    .home-container > div{
+        width: 368px;
+
+    }
+    .explore-container:hover{
+        width: 300px;
+        height: 300px;
+
+    }
+    .home-left-content h2{
+        font-size: 16px;
+    }
+    .home-left-content h1{
+        font-size: 125px;
+    }
+    .home-left-content p{
+        font-size: 15px;
+    }
+  }
