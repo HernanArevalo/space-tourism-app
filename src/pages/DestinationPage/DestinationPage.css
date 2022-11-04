@@ -136,3 +136,54 @@
 .destination-data > div{
     width: 200px;
 }
+
+
+@media (max-width: 870px) {
+    .destination-container{
+        background: url('../../assets/destination/background-destination-tablet.jpg');
+        background-size: cover;
+        padding-top: 120px;
+    }
+    .page-title{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .destination-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-content img{
+        width: 250px;
+    }
+    .destination-content > div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .destination-list{
+        margin-top: 20px;
+        width: 250px;
+    }
+    .destination-name{
+        margin-top: 10px;
+    }
+    .destination-description{
+        font-size: 16px;
+        line-height: 28px;
+        width: 115%;
+        text-align: center;
+        height: 110px;
+    }
+    .destination-data{
+        align-items: center;
+        justify-content: center;
+    }
+    .destination-data > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

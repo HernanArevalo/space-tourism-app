@@ -8,6 +8,7 @@ export const TechnologyPage = () => {
 
   const tech = technology.filter( tech => tech.name.toLowerCase().includes( techParam ) )[0]
 
+  
 
   return (
     <div className="tech-container animate__animated animate__fadeIn animate__slow">
@@ -23,8 +24,8 @@ export const TechnologyPage = () => {
 
               { technology.map((tech,index) => (
 
-                <Link to={`/technology/${tech.name.toLowerCase()}`}> 
-                  <div className={`tech-circle${tech.name.toLowerCase().includes(techParam)? ' active':''}`} key={ tech.name }>
+                <Link to={`/technology/${tech.name.toLowerCase()}`} key={ tech.name }> 
+                  <div className={`tech-circle${tech.name.toLowerCase().includes(techParam)? ' active':''}`}>
                       {index+1}
                   </div>
                 </Link> 
@@ -48,7 +49,7 @@ export const TechnologyPage = () => {
 
           <div className='tech-right-content'>
             <div className="tech-picture">
-              <img src={ `${ tech.images.portrait }` } className='planet-image' />
+              <img src={`${ tech.images.portrait }`} className='planet-image' />
             </div>
           </div>
 

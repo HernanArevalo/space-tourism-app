@@ -66,8 +66,6 @@
 
 }
 
-
-
 .tech-text{
     width: 59%;
 }
@@ -101,4 +99,38 @@
 
 .tech-picture img{
     height: 500px;
+}
+
+
+@media (max-width: 870px) {
+    .body{
+        overflow: hidden;
+    }
+    .tech-container{
+        background: url('../../assets/technology/background-technology-tablet.jpg');
+        backdrop-filter: blur(20px);
+        background-size: cover;
+        padding-top: 120px;
+    }
+    
+    .page-title{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .tech-content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tech-right-content{
+        width: 100%;
+    }
+    .tech-picture{
+        box-sizing: border-box;
+    }
+    .planet-image, .tech-picture{
+        height: 263px;
+    }
+
 }

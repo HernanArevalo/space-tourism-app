@@ -54,20 +54,19 @@
 }
 
 .member-circle{
-    background-color: white;
-    opacity: .1744;
+    background-color: #979797;
     border-radius: 999px;
     width: 15px;
     height: 15px;
     transition: .3s;
 }
 .member-circle:hover{
-    opacity: .5;
+    background-color: white;
 }
 
 
 .member-circle.active{
-    opacity: 1;
+    background-color: white;
 
 }
 
@@ -77,4 +76,61 @@
     bottom: 0;
     width: auto;
     max-height: 600px;
+}
+
+
+@media (max-width: 870px) {
+    .body{
+        overflow: hidden;
+    }
+    .crew-container{
+        background: url('../../assets/crew/background-crew-tablet.jpg');
+        backdrop-filter: blur(20px);
+        background-size: cover;
+        padding-top: 120px;
+    }
+    .page-title{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .crew-content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .crew-left-content > h3{
+        margin: 0;
+        text-align: center;
+        font-size: 24px;
+    }
+    .crew-left-content > h2{
+        margin: 0;
+        margin-top: 8px;
+        text-align: center;
+        font-size: 40px;
+    }
+    .crew-left-content > p{
+        font-family: Barlow;
+        text-align: center;
+        margin: 0;
+        margin-top: 8px;
+        text-align: center;
+        font-size: 16px;
+        height: 80px;
+    }
+    .members-circles{
+        position: static;
+        justify-content: space-between;
+        margin-top: 120px;
+        margin: 40px auto;
+
+    }
+    .member-picture > img{
+        height: 50%;
+    }
+    .member-picture,.crew-right-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
