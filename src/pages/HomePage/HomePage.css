@@ -123,3 +123,28 @@
         font-size: 18px;
     }
   }
+
+@media (max-width: 410px) {
+    .home-container{
+        padding-top: 120px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .home-container > div{
+        width: auto;
+    }
+    .home-left-content h2{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .home-left-content h1{
+        font-size: 80px;
+        line-height: 100px;
+    }
+    .home-left-content p{
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+}

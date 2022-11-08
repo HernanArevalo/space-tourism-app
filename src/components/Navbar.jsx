@@ -1,10 +1,38 @@
 
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './Navbar.css'
 
 export const Navbar = () => {
 
     const { pathname } = useLocation()
+
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+      const updateWindowDimensions = () => {
+        const newWidth = window.innerWidth;
+        setWidth(newWidth);
+      };
+  
+      window.addEventListener("resize", updateWindowDimensions);
+  
+      return () => window.removeEventListener("resize", updateWindowDimensions) 
+  
+    }, []);
+
+    const [isNavExpanded, setIsNavExpanded] = useState(false)
+
+    const changeNavPosition = () =>{
+        if (width < 410){
+            setIsNavExpanded( !isNavExpanded )
+        }else{
+            setIsNavExpanded( false )
+        }
+
+        
+    }
+
 
   return (
     <>
@@ -16,8 +44,17 @@ export const Navbar = () => {
 
             <div className="navbar-line"></div>
 
-            <ul className='navbar-list'>
-                <li className='navbar-item'>
+            <div className="burger-icon" onClick={ changeNavPosition }>
+                <img src='/src/assets/shared/icon-hamburger.svg' alt="" />
+            </div>
+
+            <ul className={`navbar-list ${ isNavExpanded }`}>
+
+                <button className="close-icon" onClick={ changeNavPosition }>
+                    <img src='/src/assets/shared/icon-close.svg' alt="" />
+                </button>
+
+                <li className='navbar-item' onClick={ changeNavPosition }>
                     <Link to="home">
                     <div className="navbar-item-text">
                         <span className='navbar-item-number'>00</span>
@@ -27,7 +64,7 @@ export const Navbar = () => {
                     {pathname.includes('home') && <div className='navbar-active-rectangle'></div>}
                     <div className='navbar-hover-rectangle'></div>
                 </li>
-                <li className='navbar-item'>
+                <li className='navbar-item' onClick={ changeNavPosition }>
                     <Link to="destination/moon">
                     <div className="navbar-item-text">
                         <span className='navbar-item-number'>01</span>
@@ -37,7 +74,7 @@ export const Navbar = () => {
                     {pathname.includes('destination') && <div className='navbar-active-rectangle'></div>}
                     <div className='navbar-hover-rectangle'></div>
                 </li>
-                <li className='navbar-item'>
+                <li className='navbar-item' onClick={ changeNavPosition }>
                     <Link to="crew/hurley">
                         <div className="navbar-item-text">
                             <span className='navbar-item-number'>02</span>
@@ -47,7 +84,7 @@ export const Navbar = () => {
                     {pathname.includes('crew') && <div className='navbar-active-rectangle'></div>}
                     <div className='navbar-hover-rectangle'></div>
                 </li>
-                <li className='navbar-item'>
+                <li className='navbar-item' onClick={ changeNavPosition }>
                     <Link to="technology/spaceport">
                     <div className="navbar-item-text">
                         <span className='navbar-item-number'>03</span>
@@ -61,6 +98,7 @@ export const Navbar = () => {
             </ul>
 
         </nav>
+
     </>
   )
 }

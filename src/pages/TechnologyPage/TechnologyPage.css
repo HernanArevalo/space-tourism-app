@@ -128,9 +128,74 @@
     }
     .tech-picture{
         box-sizing: border-box;
+        height: auto;
     }
-    .planet-image, .tech-picture{
+    .tech-picture img{
+        width: 100%;
+        height: auto;
+    }
+    .planet-image{
         height: 263px;
     }
 
+    .tech-left-content{
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tech-circles{
+        flex-direction: row;
+        margin: 0;
+        width: 190px;
+        margin-top: 10px;
+    }
+    .tech-circle{
+        height: 50px;
+        width: 50px;
+    }
+    .tech-text{
+        text-align: center;
+    }
+    .tech-text h3{
+        font-size: 16px;
+    }
+    .tech-text h2{
+        font-size: 40px;
+    }
+    .tech-text p{
+        font-family: Barlow;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 410px) {
+    .tech-container{
+        background: url('../../assets/crew/background-crew-mobile.jpg');
+        justify-content: center;
+        align-items: center;
+        padding-top: 90px;
+        background-size: cover;
+    }
+    .tech-container > div{
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .page-title{
+        text-align: center;
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 16px !important;
+    }
+    .tech-circles{
+        margin-top: 20px;
+    }
+    .tech-text{
+        width: 84%;
+    }
+    .tech-text h2{
+        font-size: 28px;
+    }
 }

@@ -134,3 +134,66 @@
         align-items: center;
     }
 }
+
+@media (max-width: 410px) {
+    .crew-container{
+        background: url('../../assets/crew/background-crew-mobile.jpg');
+        justify-content: center;
+        align-items: center;
+        padding-top: 90px;
+        background-size: cover;
+    }
+    .crew-container > div{
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .page-title{
+        text-align: center;
+        margin: 0;
+        margin-bottom: 30px;
+
+        font-size: 16px !important;
+    }
+
+    .crew-content{
+        flex-direction: column-reverse;
+    }
+
+    .member-picture{
+        width: 80vw;
+        border-bottom: 2px solid #383B4B;
+        margin-bottom: 32px;
+    }
+    .member-picture img{
+        position: static;
+        height: 240px;
+    }
+
+    .memember-charge{
+        font-size: 18px !important;
+        margin-bottom: 10px;
+    }
+    .member-name{
+        font-size: 26px !important;
+    }
+    .crew-left-content{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .crew-content > div{
+        width: auto;
+        
+    }
+    .crew-left-content > p{
+        font-family: Barlow;
+        line-height: 25px;
+        width: 80vw;
+        height: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

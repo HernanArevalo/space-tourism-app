@@ -31,7 +31,7 @@ export const CrewPage = () => {
             </p>
             <div className="members-circles">
               { crew.map(memb => (
-                  <Link to={`/crew/${memb.lastname.toLowerCase()}`}> 
+                  <Link to={`/crew/${memb.lastname.toLowerCase()}`} key={ memb.lastname.toLowerCase() }> 
                     <div className={`member-circle${memb.name.toLowerCase().includes(memberParam)? ' active':''}`}></div>
                   </Link> 
               ))}
