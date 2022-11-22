@@ -29,8 +29,6 @@ export const Navbar = () => {
         }else{
             setIsNavExpanded( false )
         }
-
-        
     }
 
 
@@ -39,18 +37,18 @@ export const Navbar = () => {
         <nav className='navbar'>
 
             <div className="navbar-logo">
-                <img src='src/assets/shared/logo.svg' alt="" />
+                <img src='/src/assets/shared/logo.svg' alt="" />
             </div>
 
             <div className="navbar-line"></div>
 
-            <div className="burger-icon" onClick={ changeNavPosition }>
+            <div className="burger-icon" onClick={ ()=> setIsNavExpanded( true ) }>
                 <img src='/src/assets/shared/icon-hamburger.svg' alt="" />
             </div>
 
             <ul className={`navbar-list ${ isNavExpanded }`}>
 
-                <button className="close-icon" onClick={ changeNavPosition }>
+                <button className="close-icon" onClick={ ()=> setIsNavExpanded( false ) }>
                     <img src='/src/assets/shared/icon-close.svg' alt="" />
                 </button>
 

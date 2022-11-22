@@ -124,9 +124,6 @@
 }
 
 @media (max-width: 410px) {
-    body{
-        overflow: hidden;
-    }
 
     .burger-icon,.close-icon{
         display: inherit;
@@ -167,16 +164,22 @@
     }
     
 
+
     .navbar-list{
+        position: absolute;
         flex-direction: column;
         top: 0px;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(70px);
         align-items: end;
         justify-content: start;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(70px);
         transition: .4s ease-in-out;
     }
+    .navbar-list.false{
+        right: -273px;
+    }
+
     .navbar-item{
         width: 100%;
         margin-bottom: 20px;
@@ -195,7 +198,4 @@
         cursor: pointer;
     }
 
-    .navbar-list.false{
-        right: -273px;
-    }
 }
