@@ -27,7 +27,7 @@ export const DestinationPage = () => {
               { destinations.map(destination =>           
                     (
                       <li className='destination-item' key={ destination.name }>
-                          <Link to={`/destination/${destination.name.toLowerCase()}`}>
+                          <Link to={`https://github.com/HernanArevalo/space-tourism-app/blob/e5d5593dc123bbfc1d75c51f0bad0f93a40d7ac1/src/assets/destination/${destination.name.toLowerCase()}`}>
                             <div className={`destination-item-text ${destinationParam.includes(destination.name.toLowerCase())? 'active':''}`}>
                                 { destination.name.toUpperCase() }
                             </div>
