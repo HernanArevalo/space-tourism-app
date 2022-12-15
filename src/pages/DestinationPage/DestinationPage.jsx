@@ -2,6 +2,13 @@
 import { Link, useParams } from 'react-router-dom'
 import { destinations } from '../../data.json'
 import './DestinationPage.css'
+import imgMars from './assets/image-mars.png'
+import imgMoon from './assets/image-moon.png'
+import imgTitan from './assets/image-titan.png'
+import imgEuropa from './assets/image-europa.png'
+
+
+
 
 
 export const DestinationPage = () => {
@@ -9,6 +16,9 @@ export const DestinationPage = () => {
   const { destination:destinationParam } = useParams()
 
   const destination = destinations.filter(dest => destinationParam.includes(dest.name.toLowerCase()))[0]
+
+  const imgs = [imgMars, imgMoon, imgEuropa, imgTitan]
+
 
   return (
     <div className="destination-container animate__animated animate__fadeIn animate__slow">
@@ -18,7 +28,7 @@ export const DestinationPage = () => {
       </div>
       <div className="destination-content">
           <div className='left-content'>
-            <img src={ `../assets/${ destination.images.png }` } className='planet-image' />
+            <img src={ `/assets/${ destination.images.png }` } className='planet-image' />
           </div>
 
           <div className='right-content'>
