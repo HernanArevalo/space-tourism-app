@@ -1,6 +1,6 @@
 
 .home-container{
-    background: url('../../assets/home/background-home-desktop.jpg');
+    background: url('./assets/background-home-desktop.jpg');
     background-size: cover;
     display: flex;
     flex-direction: row;
@@ -83,7 +83,7 @@
 
 @media (max-width: 870px) {
     .home-container{
-        background: url('../../assets/home/background-home-tablet.jpg');
+        background: url('./assets/background-home-tablet.jpg');
         font-family: Barlow;
         background-position: center;
         background-size: cover;

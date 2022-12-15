@@ -1,5 +1,5 @@
 .tech-container{
-    background: url('../../assets/technology/background-technology-desktop.jpg');
+    background: url('./assets/background-technology-desktop.jpg');
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -107,7 +107,7 @@
         overflow: hidden;
     }
     .tech-container{
-        background: url('../../assets/technology/background-technology-tablet.jpg');
+        background: url('./assets/background-technology-tablet.jpg');
         backdrop-filter: blur(20px);
         background-size: cover;
         padding-top: 120px;
@@ -172,7 +172,7 @@
 
 @media (max-width: 410px) {
     .tech-container{
-        background: url('../../assets/crew/background-crew-mobile.jpg');
+        background: url('./assets/background-crew-mobile.jpg');
         justify-content: center;
         align-items: center;
         padding-top: 90px;

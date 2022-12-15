@@ -1,5 +1,5 @@
 .crew-container{
-    background: url('../../assets/crew/background-crew-desktop.jpg');
+    background: url('./assets/background-crew-desktop.jpg');
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -84,7 +84,7 @@
         overflow: hidden;
     }
     .crew-container{
-        background: url('../../assets/crew/background-crew-tablet.jpg');
+        background: url('./assets/background-crew-tablet.jpg');
         backdrop-filter: blur(20px);
         background-size: cover;
         padding-top: 120px;
@@ -137,7 +137,7 @@
 
 @media (max-width: 410px) {
     .crew-container{
-        background: url('../../assets/crew/background-crew-mobile.jpg');
+        background: url('./assets/background-crew-mobile.jpg');
         justify-content: center;
         align-items: center;
         padding-top: 90px;

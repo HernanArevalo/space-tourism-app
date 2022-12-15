@@ -1,5 +1,5 @@
 .destination-container{
-    background: url('../../assets/destination/background-destination-desktop.jpg');
+    background: url('./assets/background-destination-desktop.jpg');
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -140,7 +140,7 @@
 
 @media (max-width: 870px) {
     .destination-container{
-        background: url('../../assets/destination/background-destination-tablet.jpg');
+        background: url('./assets/background-destination-tablet.jpg');
         background-size: cover;
         padding-top: 120px;
     }
@@ -191,7 +191,7 @@
 
 @media (max-width: 410px) {
     .destination-container{
-        background: url('../../assets/destination/background-destination-mobile.jpg');
+        background: url('./assets/background-destination-mobile.jpg');
         background-size: cover;
         justify-content: center;
         align-items: center;
