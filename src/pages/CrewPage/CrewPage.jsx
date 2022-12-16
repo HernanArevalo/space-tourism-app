@@ -41,7 +41,7 @@ export const CrewPage = () => {
 
           <div className='crew-right-content'>
             <div className="member-picture">
-              <img src={ `${ member.images.png }` } className='planet-image' />
+              <img src={ `/assets/crew/${ member.images.png }` } className='planet-image' />
             </div>
           </div>
 
