@@ -13,7 +13,7 @@ export const CrewPage = () => {
 
   return (
     <div className="crew-container animate__animated animate__fadeIn animate__slow">
-      <div className="page-title">
+      <div className="page-title animate__animated animate__fadeInLeft">
           <span className="">02</span>
           MEET YOUR CREW
       </div>
@@ -40,7 +40,7 @@ export const CrewPage = () => {
           </div>
 
           <div className='crew-right-content'>
-            <div className="member-picture">
+            <div className="member-picture animate__animated animate__fadeIn animate__delay-1s">
               <img src={ `/assets/crew/${ member.images.png }` } className='planet-image' />
             </div>
           </div>

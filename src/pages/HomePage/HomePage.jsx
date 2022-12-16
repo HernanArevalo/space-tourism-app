@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import './HomePage.css'
 
 export const HomePage = () => {
@@ -14,11 +15,13 @@ export const HomePage = () => {
         </p>
       </div>
       <div>
+      <Link to={`/destination/moon`}> 
       <div className='explore-container'>
         <div>
           <span>EXPLORE</span>
         </div>
       </div>
+      </Link>
 
       </div>
     </div>

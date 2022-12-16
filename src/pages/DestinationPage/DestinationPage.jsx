@@ -28,7 +28,7 @@ export const DestinationPage = () => {
       </div>
       <div className="destination-content">
           <div className='left-content'>
-            <img src={ `/assets/destination/${ destination.images.png }` } className='planet-image' alt={ `${destination.name.toLowerCase()} image` }/>
+            <img src={ `/assets/destination/${ destination.images.png }` } className='planet-image animate__animated animate__fadeIn animate__delay-1s' alt={ `${destination.name.toLowerCase()} image` }/>
           </div>
 
           <div className='right-content'>

@@ -63,7 +63,7 @@ export const TechnologyPage = () => {
 
           <div className='tech-right-content'>
             <div className="tech-picture">
-              <img src={width >= 870? `/assets/technology/${ tech.images.portrait }`:`/assets/technology/${ tech.images.landscape }`} className='planet-image' />
+              <img src={width >= 870? `/assets/technology/${ tech.images.portrait }`:`/assets/technology/${ tech.images.landscape }`} className='planet-image animate__animated animate__fadeIn animate__delay-1s' />
               
             </div>
           </div>
