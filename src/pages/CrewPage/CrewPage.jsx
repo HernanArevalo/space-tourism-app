@@ -41,7 +41,7 @@ export const CrewPage = () => {
 
           <div className='crew-right-content'>
             <div className="member-picture animate__animated animate__fadeIn animate__delay-1s">
-              <img src={ `/assets/crew/${ member.images.png }` } className='planet-image' />
+              <img src={ `/assets/crew/${ member.images.png }` } className='planet-image animate__animated animate__fadeIn animate__delay-1s' alt={member.name.toLowerCase()}/>
             </div>
           </div>
 

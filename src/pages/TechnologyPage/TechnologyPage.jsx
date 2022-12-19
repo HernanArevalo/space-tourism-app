@@ -9,12 +9,11 @@ export const TechnologyPage = () => {
 
   const tech = technology.filter( tech => tech.name.toLowerCase().includes( techParam ) )[0]
 
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState( window.innerWidth );
 
   useEffect(() => {
     const updateWindowDimensions = () => {
-      const newWidth = window.innerWidth;
-      setWidth(newWidth);
+      setWidth( window.innerWidth );
     };
 
     window.addEventListener("resize", updateWindowDimensions);
@@ -63,7 +62,7 @@ export const TechnologyPage = () => {
 
           <div className='tech-right-content'>
             <div className="tech-picture">
-              <img src={width >= 870? `/assets/technology/${ tech.images.portrait }`:`/assets/technology/${ tech.images.landscape }`} className='planet-image animate__animated animate__fadeIn animate__delay-1s' />
+              <img src={width >= 870? `/assets/technology/${ tech.images.portrait }`:`/assets/technology/${ tech.images.landscape }`} className='planet-image animate__animated animate__fadeIn animate__delay-1s' alt={tech.name} />
               
             </div>
           </div>
