@@ -5,11 +5,13 @@ import './SpaceApp.css'
 
 function SpaceApp() {
 
+
+
   return (
     <div className="space-app">
       <Navbar />
 
-      <SpaceRouter />
+      <SpaceRouter/>
 
     </div>
   )

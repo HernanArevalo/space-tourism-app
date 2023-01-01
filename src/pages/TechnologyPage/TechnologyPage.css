@@ -172,7 +172,7 @@
 
 @media (max-width: 410px) {
     .tech-container{
-        background: url('./assets/background-crew-mobile.jpg');
+        background: url('./assets/background-technology-mobile.jpg');
         justify-content: center;
         align-items: center;
         padding-top: 90px;

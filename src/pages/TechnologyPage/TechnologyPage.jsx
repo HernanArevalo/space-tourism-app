@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import { technology } from '../../data.json'
+import { desactivateNavBar } from '../../store/navbar'
 import './TechnologyPage.css'
 
 export const TechnologyPage = () => {
+
+  const dispatch = useDispatch()
+
 
   const { tech:techParam } = useParams()
 
@@ -24,7 +29,7 @@ export const TechnologyPage = () => {
 
 
   return (
-    <div className="tech-container animate__animated animate__fadeIn animate__slow">
+    <div className="tech-container animate__animated animate__fadeIn animate__slow" onClick={  ()=> dispatch( desactivateNavBar() ) }>
       <div className="page-title">
           <span className="">03</span>
           SPACE LAUNCH 101

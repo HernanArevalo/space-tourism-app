@@ -1,13 +1,18 @@
 
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import './Navbar.css'
 import iconLogo from '../assets/shared/logo.svg'
 import iconHamburger from '../assets/shared/icon-hamburger.svg'
 import iconClose from '../assets/shared/icon-close.svg'
+import { activateNavBar, desactivateNavBar } from "../store/navbar";
 
 
 export const Navbar = () => {
+
+    const dispatch = useDispatch()
+    const { navbarState } = useSelector((state) => state.navbar)
 
     const { pathname } = useLocation()
 
@@ -35,6 +40,10 @@ export const Navbar = () => {
         }
     }
 
+    const onBurgerClicked = () => {
+        dispatch( activateNavBar() )
+    }
+
 
   return (
     <>
@@ -46,17 +55,17 @@ export const Navbar = () => {
 
             <div className="navbar-line"></div>
 
-            <div className="burger-icon" onClick={ ()=> setIsNavExpanded( true ) }>
+            <div className="burger-icon" onClick={ onBurgerClicked }>
                 <img src={ iconHamburger } alt="" />
             </div>
 
-            <ul className={`navbar-list ${ isNavExpanded }`}>
+            <ul className={`navbar-list ${ navbarState }`}>
 
-                <button className="close-icon" onClick={ ()=> setIsNavExpanded( false ) }>
+                <button className="close-icon" onClick={ ()=> dispatch( desactivateNavBar() ) }>
                     <img src={ iconClose } alt="" />
                 </button>
 
-                <li className='navbar-item' onClick={ changeNavPosition }>
+                <li className='navbar-item' onClick={  ()=> dispatch( desactivateNavBar() )  }>
                     <Link to="home">
                     <div className="navbar-item-text">
                         <span className='navbar-item-number'>00</span>
@@ -66,7 +75,7 @@ export const Navbar = () => {
                     {pathname.includes('home') && <div className='navbar-active-rectangle'></div>}
                     <div className='navbar-hover-rectangle'></div>
                 </li>
-                <li className='navbar-item' onClick={ changeNavPosition }>
+                <li className='navbar-item' onClick={  ()=> dispatch( desactivateNavBar() )  }>
                     <Link to="destination/moon">
                     <div className="navbar-item-text">
                         <span className='navbar-item-number'>01</span>
@@ -76,7 +85,7 @@ export const Navbar = () => {
                     {pathname.includes('destination') && <div className='navbar-active-rectangle'></div>}
                     <div className='navbar-hover-rectangle'></div>
                 </li>
-                <li className='navbar-item' onClick={ changeNavPosition }>
+                <li className='navbar-item' onClick={  ()=> dispatch( desactivateNavBar() )  }>
                     <Link to="crew/hurley">
                         <div className="navbar-item-text">
                             <span className='navbar-item-number'>02</span>
@@ -86,7 +95,7 @@ export const Navbar = () => {
                     {pathname.includes('crew') && <div className='navbar-active-rectangle'></div>}
                     <div className='navbar-hover-rectangle'></div>
                 </li>
-                <li className='navbar-item' onClick={ changeNavPosition }>
+                <li className='navbar-item' onClick={  ()=> dispatch( desactivateNavBar() )  }>
                     <Link to="technology/launch%20vehicle">
                     <div className="navbar-item-text">
                         <span className='navbar-item-number'>03</span>

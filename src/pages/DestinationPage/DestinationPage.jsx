@@ -1,11 +1,9 @@
 
 import { Link, useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import { destinations } from '../../data.json'
 import './DestinationPage.css'
-import imgMars from './assets/image-mars.png'
-import imgMoon from './assets/image-moon.png'
-import imgTitan from './assets/image-titan.png'
-import imgEuropa from './assets/image-europa.png'
+import { desactivateNavBar } from '../../store/navbar'
 
 
 
@@ -13,15 +11,15 @@ import imgEuropa from './assets/image-europa.png'
 
 export const DestinationPage = () => {
 
+  const dispatch = useDispatch()
+
   const { destination:destinationParam } = useParams()
 
   const destination = destinations.filter(dest => destinationParam.includes(dest.name.toLowerCase()))[0]
 
-  const imgs = [imgMars, imgMoon, imgEuropa, imgTitan]
-
 
   return (
-    <div className="destination-container animate__animated animate__fadeIn animate__slow">
+    <div className="destination-container animate__animated animate__fadeIn animate__slow" onClick={ ()=> dispatch( desactivateNavBar() ) }>
       <div className="page-title">
           <span className="">01</span>
           PICK YOUR DESTINATION

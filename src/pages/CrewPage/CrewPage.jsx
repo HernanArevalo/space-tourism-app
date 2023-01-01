@@ -1,9 +1,13 @@
+import { useDispatch } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import { crew } from '../../data.json'
+import { desactivateNavBar } from '../../store/navbar'
 import './CrewPage.css'
 
 
 export const CrewPage = () => {
+
+  const dispatch = useDispatch()
 
   const { member:memberParam } = useParams()
 
@@ -12,7 +16,7 @@ export const CrewPage = () => {
 
 
   return (
-    <div className="crew-container animate__animated animate__fadeIn animate__slow">
+    <div className="crew-container animate__animated animate__fadeIn animate__slow" onClick={  ()=> dispatch( desactivateNavBar() ) }>
       <div className="page-title animate__animated animate__fadeInLeft">
           <span className="">02</span>
           MEET YOUR CREW

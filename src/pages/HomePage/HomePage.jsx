@@ -1,10 +1,17 @@
 
 import { Link } from 'react-router-dom'
 import './HomePage.css'
+import { useDispatch } from 'react-redux'
+import { desactivateNavBar } from '../../store/navbar'
+
 
 export const HomePage = () => {
+
+  const dispatch = useDispatch()
+
+
   return (
-    <div className="home-container animate__animated animate__fadeIn animate__slow">
+    <div className="home-container animate__animated animate__fadeIn animate__slow" onClick={  ()=> dispatch( desactivateNavBar() )  }>
 
       <div className="home-left-content">
         <h2>SO, YOU WANT TO TRAVEL TO</h2>
